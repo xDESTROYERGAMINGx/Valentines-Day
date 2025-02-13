@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Enter Your Name</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Welcome!</h1>
+        <p>Please enter your name:</p>
+        <input type="text" id="nameInput" placeholder="Your Name" />
+        <button id="submitButton">Submit</button>
+        <p id="message" class="hidden"></p>
+    </div>
+
+    <script>
+        document.getElementById('submitButton').addEventListener('click', function() {
+            const name = document.getElementById('nameInput').value.trim().toLowerCase();
+            if (name === 'sophia') {
+                window.location.href = 'Sophia/index.html';
+            } else {
+                document.getElementById('message').textContent = 'Access Denied. Please try again.';
+                document.getElementById('message').classList.remove('hidden');
+            }
+        });
+    </script>
+</body>
+</html>
