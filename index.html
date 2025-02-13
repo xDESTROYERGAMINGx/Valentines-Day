@@ -29,5 +29,36 @@
             </div>
         </div>
     </div>
+
+    <div id="music-status">Music is currently: <span id="status">stopped</span></div>
+
+    <script>
+        const backgroundMusic = document.getElementById('background-music');
+        const statusDisplay = document.getElementById('status');
+    
+        // Function to update the status display
+        function updateStatus() {
+            if (backgroundMusic.paused) {
+                statusDisplay.textContent = 'stopped';
+            } else {
+                statusDisplay.textContent = 'playing';
+            }
+        }
+    
+        // Event listeners for play and pause
+        backgroundMusic.addEventListener('play', updateStatus);
+        backgroundMusic.addEventListener('pause', updateStatus);
+        backgroundMusic.addEventListener('ended', () => {
+            updateStatus();
+            backgroundMusic.play().catch(error => {
+                console.log("Autoplay was prevented. User interaction is required to play audio.");
+            });
+        });
+    
+        // Start playing the music automatically (if allowed by the browser)
+        backgroundMusic.play().catch(error => {
+            console.log("Autoplay was prevented. User interaction is required to play audio.");
+        });
+    </script>
 </body>
 </html>
