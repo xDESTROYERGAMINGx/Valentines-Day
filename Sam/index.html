@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <title>VALENTINES DAY 2025</title>
+</head>
+<body>
+    <audio id="background-music" loop autoplay>
+        <source src="music/Mac DeMarco  No Other Heart (Official Audio).mp3" type="audio/mp3">
+    </audio>
+    <div class="valentines_card">
+        <div class="front_card">
+            <img src="https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExZHRjNnZuZWZ3ZHZ3cGR0c3pjZ21xcmpnYmVmNDMxNXcwN21vNmJ3biZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/c76IJLufpNwSULPk77/giphy.gif" class="front_img" alt="Valentine's Day Image">
+            <div class="front_text">
+                <h3>HAPPY VALENTINES DAY</h3>
+                <h6>(CLICK TO SEE MESSAGE)</h6>
+            </div>    
+        </div>
+        <div class="inside_card">
+            <div class="tenor-gif-embed" data-postid="15551579062997807532" data-share-method="host" data-aspect-ratio="1" data-width="40%">
+                <a href="https://tenor.com/view/chocolate-chocolate-heart-valentine-valentine%27s-day-valentines-gif-15551579062997807532">Chocolate Chocolate Heart Sticker</a> from <a href="https://tenor.com/search/chocolate-stickers">Chocolate Stickers</a>
+            </div>
+            <script type="text/javascript" async src="https://tenor.com/embed.js"></script>
+            <div class="inside_text">
+                <h3>Happy Valentine's Day, Sam!</h3>
+                <h4>Happy Valentine's Day! I hope you enjoyed today 💓 Thank you for everything and i hope we will spend more valentines together."</h4>
+                <h6>~Ana</h6>
+            </div>
+            <button id="play-button"><i class="fas fa-play"></i></button>
+        </div>
+    </div>
+
+
+
+    <script>
+        const backgroundMusic = document.getElementById('background-music');
+        const statusDisplay = document.getElementById('status');
+        const playButton = document.getElementById('play-button');
+
+        // Function to update the status display
+        function updateStatus() {
+            if (backgroundMusic.paused) {
+                statusDisplay.textContent = 'stopped';
+            } else {
+                statusDisplay.textContent = 'playing';
+            }
+        }
+
+        // Event listeners for play and pause
+        backgroundMusic.addEventListener('play', updateStatus);
+        backgroundMusic.addEventListener('pause', updateStatus);
+        backgroundMusic.addEventListener('ended', () => {
+            updateStatus();
+            backgroundMusic.play().catch(error => {
+                console.log("Autoplay was prevented. User interaction is required to play audio.");
+            });
+        });
+
+        // Play music on button click
+        playButton.addEventListener('click', () => {
+            backgroundMusic.play().then(() => {
+                updateStatus();
+            }).catch(error => {
+                console.log("Autoplay was prevented. User interaction is required to play audio.");
+            });
+        });
+    </script>
+</body>
+</html>
