@@ -63,7 +63,7 @@ body {
 
 .front_text, .inside_text {
     color: #A60657;
-    font-family: 'Brush Script MT', cursive;
+    font-family: 'Arial', sans-serif;
     font-size: 24px;
     text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.8);
 }
