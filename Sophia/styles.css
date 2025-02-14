@@ -122,14 +122,16 @@ body {
 
 @media (max-width: 767.98px) {
     .front_text, .inside_text {
-        font-size: 18px; /* Adjust font size for phones */
+        font-size: 15px; /* Adjust font size for phones */
     }
 
     .valentines_card {
-        width: 95%; /* Use even more width on mobile */
+        width: 75%; /* Use even more width on mobile */
+        height: 50%;
     }
 
     .front_card, .inside_card {
-        height: auto; /* Allow height to adjust */
+        height: 50%; /* Allow height to adjust */
+        width: 75%;
     }
 }
