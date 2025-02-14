@@ -133,8 +133,8 @@ body {
     }
 
     .front_card, .inside_card {
-        height: auto; /* Allow height to adjust */
+        height: 500px; /* Allow height to adjust */
         width: auto;
-        margin: auto;
+        margin-top: 60%;
     }
 }

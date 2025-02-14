@@ -135,6 +135,6 @@ body {
     .front_card, .inside_card {
         height: 500px; /* Allow height to adjust */
         width: auto;
-        margin-top: 50%;
+        margin-top: 60%;
     }
 }
