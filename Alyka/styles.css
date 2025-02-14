@@ -128,12 +128,12 @@ body {
 
     .valentines_card {
         width: 95%; /* Use even more width on mobile */
-        height: 800px;
+        height: auto;
         margin-bottom: 100%;
     }
 
     .front_card, .inside_card {
-        height: 400px; /* Allow height to adjust */
+        height: 500px; /* Allow height to adjust */
         width: auto;
         margin: auto;
     }
