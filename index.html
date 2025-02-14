@@ -15,33 +15,40 @@
         <p id="message" class="hidden"></p>
     </div>
 
-    <script>
-        document.getElementById('submitButton').addEventListener('click', function() {
-            const name = document.getElementById('nameInput').value.trim().toLowerCase();
-            if (name === '0sophia') {
-                window.location.href = 'Sophia/index.html'; //Done
-            } else if (name === '1kyle') {
-                window.location.href = 'Kyle/index.html';  //Done
-            } else if (name === '2alyka') {
-                window.location.href = 'Alyka/index.html';  //Done
-            } else if (name === '3kirstine') {
-                window.location.href = 'Kirstine/index.html';  //Done
-            } else if (name === '4nova') {
-                window.location.href = 'Nova/index.html';  //Done
-            } else if (name === '5janna') {
-                window.location.href = 'Janna/index.html';  //Done
-            } else if (name === 'elizabeth') {
-                window.location.href = 'Elizabeth/index.html';  //Done
-            } else if (name === '7risha') {
-                window.location.href = 'Risha/index.html';  //Done
-            } else if (name === 'mamajoy') {
-                window.location.href = 'Mama/index.html';   //Done
-            } else if (name === '0herasol') {
-                window.location.href = 'Herasol/index.html';  //Done
-            } else {
-                window.location.href = 'Other/index.html?name=' + encodeURIComponent(name);
-            }
-        });
-    </script>
+<script>
+    document.getElementById('submitButton').addEventListener('click', function() {
+        const name = document.getElementById('nameInput').value.trim().toLowerCase();
+
+        // Check if the input is empty or consists only of numbers
+        if (name === '' || !isNaN(name)) {
+            alert('PANGALAN PLS');
+            return; // Exit the function early
+        }
+
+        if (name === '0sophia') {
+            window.location.href = 'Sophia/index.html'; //Done
+        } else if (name === '1kyle') {
+            window.location.href = 'Kyle/index.html';  //Done
+        } else if (name === '2alyka') {
+            window.location.href = 'Alyka/index.html';  //Done
+        } else if (name === '3kirstine') {
+            window.location.href = 'Kirstine/index.html';  //Done
+        } else if (name === '4nova') {
+            window.location.href = 'Nova/index.html';  //Done
+        } else if (name === '5janna') {
+            window.location.href = 'Janna/index.html';  //Done
+        } else if (name === 'elizabeth') {
+            window.location.href = 'Elizabeth/index.html';  //Done
+        } else if (name === '7risha') {
+            window.location.href = 'Risha/index.html';  //Done
+        } else if (name === 'mamajoy') {
+            window.location.href = 'Mama/index.html';   //Done
+        } else if (name === '0herasol') {
+            window.location.href = 'Herasol/index.html';  //Done
+        } else {
+            window.location.href = 'Other/index.html?name=' + encodeURIComponent(name);
+        }
+    });
+</script>
 </body>
 </html>
