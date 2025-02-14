@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>VALENTINES DAY 2025</title>
+</head>
+<body>
+    <audio id="background-music" loop autoplay>
+        <source src="music/Mac DeMarco  No Other Heart (Official Audio).mp3" type="audio/mp3">
+    </audio>
+    <div class="valentines_card">
+        <div class="front_card">
+            <img src="https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExZzdocmhzZ3M0YWpmYzl6dGxuZ2wxNjdhcmU0eHp2eDlqemc5cGtnZyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/26BRv0ThflsHCqDrG/giphy.gif" class="front_img" alt="Valentine's Day Image">
+            <div class="front_text">
+                <h3>HAPPY VALENTINES DAY</h3>
+                <h6>(CLICK TO SEE MESSAGE)</h6>
+            </div>    
+        </div>
+        <div class="inside_card">
+                <div class="tenor-gif-embed" data-postid="16276290" data-share-method="host" data-aspect-ratio="1.13475" data-width="40%"><a href="https://tenor.com/view/winnie-the-pooh-pooh-bear-disney-disneytoons-movies-gif-16276290">Winnie The Pooh Pooh Bear Sticker</a>from <a href="https://tenor.com/search/winnie+the+pooh-stickers">Winnie The Pooh Stickers</a></div> <script type="text/javascript" async src="https://tenor.com/embed.js"></script>
+            <div class="inside_text">
+                <h4 id="greeting">HAPPY VALENTINE'S DAY</h4>
+                <h3 id="personal-message">Even if no one else wished you a Happy Valentine’s Day, know that I’m here for you. May your heart be filled with love and joy today and always!</h3>
+                <h6>~Patrick</h6>
+            </div>
+            <button id="play-button">Play Music</button>
+        </div>
+    </div>
+
+    <script>
+        // Function to get query parameters
+        function getQueryParameter(name) {
+            const urlParams = new URLSearchParams(window.location.search);
+            return urlParams.get(name);
+        }
+
+        // Get the name from the query parameter
+        const name = getQueryParameter('name');
+
+        // Update the greeting message if the name is present
+        if (name) {
+            document.getElementById('greeting').textContent = 'HAPPY VALENTINE\'S DAY ' + decodeURIComponent(name.toUpperCase());
+        }
+
+        const backgroundMusic = document.getElementById('background-music');
+        const playButton = document.getElementById('play-button');
+
+        // Play music on button click
+        playButton.addEventListener('click', () => {
+            backgroundMusic.play().catch(error => {
+                console.log("Autoplay was prevented. User interaction is required to play audio.");
+            });
+        });
+    </script>
